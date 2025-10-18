@@ -31,7 +31,7 @@ uses
   {$IFDEF FPC}
   winver,
   {$ENDIF}
-{$ENDIF}
+{$ENDIF} sockets, blcksock;
 
 
 //Example 02

@@ -1,13 +1,13 @@
 # Cross-platform-Linux-Unix-Windows-use-Pascal-IDE
 
 //To use
-#ifdef _WIN32
+{$IFNDEF WIN32}
     // Original code
-#else // !_WIN32
+{$ELSE} // !_WIN32
     // Linux code
-#endif // _WIN32
+{$ENDIF} // _WIN32
 
-//Example
+//Example 01
 uses
 {$IFNDEF WIN32}
   {$IFNDEF NO_LIBC}
@@ -25,5 +25,13 @@ uses
   winver,
   {$ENDIF}
 {$ENDIF}
+
+//Example 02
+uses
+{$ifdef FPC}
+  ZStream,
+{$else}
+  ZLib,
+{$endif}
   synafpc,
   Classes, SysUtils, synautil;

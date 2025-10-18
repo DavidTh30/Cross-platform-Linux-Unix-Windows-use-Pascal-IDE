@@ -33,8 +33,11 @@ uses
   {$ENDIF}
 {$ENDIF}
 
+
 //Example 02
+
 uses
+
 {$ifdef FPC}
   ZStream,
 {$else}

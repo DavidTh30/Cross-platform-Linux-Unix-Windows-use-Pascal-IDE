@@ -1,13 +1,20 @@
 # Cross-platform-Linux-Unix-Windows-use-Pascal-IDE
 
 //To use
+
 {$IFNDEF WIN32}
+
     // Original code
+    
 {$ELSE} // !_WIN32
+
     // Linux code
+    
 {$ENDIF} // _WIN32
 
+
 //Example 01
+
 uses
 {$IFNDEF WIN32}
   {$IFNDEF NO_LIBC}
